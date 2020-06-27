@@ -21,8 +21,8 @@ namespace SampleTestAssembly
         //[Trait("TraitName1", "TraitValue2")]
         public void Fail()
         {
-            Thread.Sleep(TimeSpan.FromSeconds(1));
-            Assert.True(false);
+            Thread.Sleep(TimeSpan.FromSeconds(2));
+            Assert.True(true);
         }
 
         [Fact(Skip = "Testing")]

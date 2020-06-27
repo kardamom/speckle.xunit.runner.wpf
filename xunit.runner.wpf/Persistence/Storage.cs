@@ -14,7 +14,7 @@ namespace Xunit.Runner.Wpf.Persistence
 
         private static string GetWindowLayoutFileName(Window window) => $"{window.Name}_{WindowLayoutFileName}";
 
-        private static IsolatedStorageFile GetStorageFile() => IsolatedStorageFile.GetUserStoreForDomain();
+        private static IsolatedStorageFile GetStorageFile() => IsolatedStorageFile.GetUserStoreForAssembly();
 
         public static XmlTextReader OpenXmlFile(string fileName)
         {

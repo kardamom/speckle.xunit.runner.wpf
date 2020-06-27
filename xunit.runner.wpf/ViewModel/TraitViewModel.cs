@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
+using Xunit.Runner.Wpf;
 
 namespace Xunit.Runner.Wpf.ViewModel
 {

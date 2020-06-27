@@ -1,7 +1,7 @@
 /*
   In App.xaml:
   <Application.Resources>
-      <vm:ViewModelLocator xmlns:vm="clr-namespace:xunit.runner.wpf"
+      <vm:ViewModelLocator xmlns:vm="clr-namespace:Xunit.Runner.Wpf"
                            x:Key="Locator" />
   </Application.Resources>
   
@@ -12,8 +12,9 @@
   See http://www.galasoft.ch/mvvm
 */
 
+using CommonServiceLocator;
+using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
-using Microsoft.Practices.ServiceLocation;
 
 namespace Xunit.Runner.Wpf.ViewModel
 {
@@ -45,8 +46,13 @@ namespace Xunit.Runner.Wpf.ViewModel
         }
 
         public MainViewModel Main
-            => ServiceLocator.Current.GetInstance<MainViewModel>();
-
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<MainViewModel>();
+            }
+        }
+        
         public static void Cleanup()
         {
             // TODO Clear the ViewModels
