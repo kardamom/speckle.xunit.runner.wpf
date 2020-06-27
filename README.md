@@ -1,10 +1,9 @@
 # xunit.runner.wpf
 XUnit Gui written in WPF
 
-A simple replacement for the old winforms xunit.gui with support for xunit 2.0.
+Fork of [xunit.runner.wpf](https://www.nuget.org/packages/xunit.runner.wpf).
 
-Find it on NuGet at [xunit.runner.wpf](https://www.nuget.org/packages/xunit.runner.wpf).
+This version, currently in WIP, uses the [AssemblyRunner](xunit.v3.runner.utility) found in xunit.v3.runner.utility to run the tests so that the external dlls are loaded in the same AppDomain.
+This is necessary when running unit tests of code hosted by external applications (Revit etc).
 
-![Screenshot](docs/screenshot.png)
-
-[![Build status](https://ci.appveyor.com/api/projects/status/13dshnyj592mwe9e/branch/master?svg=true)](https://ci.appveyor.com/project/Pilchie/xunit-runner-wpf/branch/master)
+Coming soon, a xunit runner for Revit.
