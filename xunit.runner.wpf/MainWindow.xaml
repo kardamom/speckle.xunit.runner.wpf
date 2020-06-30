@@ -304,6 +304,7 @@
                     <Grid.ColumnDefinitions>
                       <ColumnDefinition Width="20" />
                       <ColumnDefinition Width="*" />
+                      <ColumnDefinition Width="auto" />
                     </Grid.ColumnDefinitions>
 
                     <Image
@@ -316,6 +317,11 @@
                                             Grid.Column="1"
                                             VerticalAlignment="Center"
                                             Text="{Binding DisplayName}" />
+                    <TextBlock
+                                            Grid.Column="2"
+                                            VerticalAlignment="Center"
+                                            Margin="10,0,2,0"
+                                            Text="{Binding ExecutionTime}" />
                   </Grid>
                 </DataTemplate>
               </ListBox.ItemTemplate>

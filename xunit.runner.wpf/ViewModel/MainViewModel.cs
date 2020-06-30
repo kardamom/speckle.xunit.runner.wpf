@@ -160,7 +160,11 @@ namespace Xunit.Runner.Wpf.ViewModel
       CurrentRunState = TestState.NotRun;
 
       foreach (var test in testsToRun)
+      {
         test.State = TestState.NotRun;
+        test.ExecutionTime = "";
+      }
+        
 
 
       var taskList = new List<Task>();
