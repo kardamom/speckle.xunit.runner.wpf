@@ -43,13 +43,4 @@ steps:
     ArtifactName: 'artifact'
     publishLocation: 'Container'
 
-- task: NuGetAuthenticate@0
-  inputs:
-    nuGetServiceConnections: 'NuGet'
-
-- task: NuGetCommand@2
-  inputs:
-    command: 'push'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
-    nuGetFeedType: 'external'
-    publishFeedCredentials: 'NuGet'
+- script: nuget push -ApiKey $(myNuGetApiKey) -Source "$(Build.ArtifactStagingDirectory)/**/*.nupkg"
