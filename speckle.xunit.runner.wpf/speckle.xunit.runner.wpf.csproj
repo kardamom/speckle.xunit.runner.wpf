@@ -14,7 +14,10 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <OutputType>Library</OutputType>
     <PackageIcon></PackageIcon>
-  </PropertyGroup>
+    <PackageIconUrl>https://avatars2.githubusercontent.com/u/2092016</PackageIconUrl>
+      <PackageIconUrl>https://avatars2.githubusercontent.com/u/2092016</PackageIconUrl>
+      <Version>1.0.1</Version>
+    </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Artwork\Application.ico" />
