@@ -18,10 +18,6 @@ variables:
  
 
 steps:
-- powershell: 
-  env:
-    APIKEY: $(nuget-apikey)
-
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
@@ -51,3 +47,5 @@ steps:
     publishLocation: 'Container'
 
 - script: nuget push -ApiKey $env:APIKEY -Source https://api.nuget.org/v3/index.json $(Build.ArtifactStagingDirectory)/**/*.nupkg
+  env:
+    APIKEY: $(nuget-apikey)
