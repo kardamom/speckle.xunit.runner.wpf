@@ -43,4 +43,4 @@ steps:
     ArtifactName: 'artifact'
     publishLocation: 'Container'
 
-- script: nuget push -ApiKey $(myNuGetApiKey) -Source "$(Build.ArtifactStagingDirectory)/**/*.nupkg"
+- script: nuget push -ApiKey $(nuget-apikey) -Source "$(Build.ArtifactStagingDirectory)/**/*.nupkg"
