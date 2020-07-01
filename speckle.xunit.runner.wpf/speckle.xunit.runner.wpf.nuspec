@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Speckle</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">Apache-2.0</license>
+    <projectUrl>https://github.com/Speckle-Next/speckle.xunit.runner.wpf</projectUrl>
+    <iconUrl>https://avatars2.githubusercontent.com/u/2092016</iconUrl>
+    <description>WPF xUnit runner</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>xunit wpf speckle runner</tags>
+    <dependencies>
+      <dependency id="MvvmLight" version="5.4.1.1"  />
+      <dependency id="System.Collections.Immutable" version="1.7.1" />
+      <dependency id="WindowsAPICodePack-Shell" version="1.1.1" />
+      <dependency id="xunit" version="2.4.1" />
+      <dependency id="xunit.runner.utility" version="2.4.1" />
+    </dependencies>
+  </metadata>
+</package>
