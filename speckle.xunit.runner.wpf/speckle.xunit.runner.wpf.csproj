@@ -13,6 +13,7 @@
     <PackageTags>xunit wpf runner speckle</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <OutputType>Library</OutputType>
+    <PackageIcon></PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +27,7 @@
     <None Remove="Artwork\Skipped_large.png" />
     <None Remove="Artwork\Skipped_small.png" />
     <None Remove="MainWindow.xaml" />
+
   </ItemGroup>
 
   <ItemGroup>
@@ -68,5 +70,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
+
 
 </Project>
