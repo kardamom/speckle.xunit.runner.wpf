@@ -9,13 +9,22 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
+
+
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  APIKEY: $(nuget-apikey)
+
+
+  
 
 steps:
+- powershell: |
+    Write-Host "This works: $env:APIKEY" 
+  env:
+    APIKEY: $(nuget-apikey)
+
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
