@@ -43,4 +43,4 @@ steps:
     ArtifactName: 'artifact'
     publishLocation: 'Container'
 
-- script: nuget push -ApiKey $(nuget-apikey) -Source https://api.nuget.org/v3/index.json **/speckle.xunit.runner.wpf.nupkg
+- script: nuget push -ApiKey $(nuget-apikey) -Source https://api.nuget.org/v3/index.json speckle.xunit.runner.wpf.*.nupkg
