@@ -13,6 +13,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  APIKEY: $(nuget-apikey)
 
 steps:
 - task: NuGetToolInstaller@1
@@ -43,4 +44,4 @@ steps:
     ArtifactName: 'artifact'
     publishLocation: 'Container'
 
-- script: nuget push -ApiKey $(nuget-apikey) -Source https://api.nuget.org/v3/index.json $(Build.ArtifactStagingDirectory)/**/*.nupkg
+- script: nuget push -ApiKey $(APIKEY) -Source https://api.nuget.org/v3/index.json $(Build.ArtifactStagingDirectory)/**/*.nupkg
