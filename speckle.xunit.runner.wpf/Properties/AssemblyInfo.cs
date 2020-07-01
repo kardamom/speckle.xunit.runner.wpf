@@ -8,9 +8,9 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Speckle.Xunit.Runner.Wpf")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("WPF Runner for xUnit")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Speckle")]
 [assembly: AssemblyProduct("Speckle.Xunit.Runner.Wpf")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]

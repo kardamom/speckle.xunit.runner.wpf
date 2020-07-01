@@ -120,6 +120,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="speckle.xunit.runner.wpf.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
