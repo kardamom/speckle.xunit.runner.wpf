@@ -27,7 +27,7 @@ namespace Xunit.Runner.Wpf.Converters
     {
       var image = new BitmapImage();
       image.BeginInit();
-      image.UriSource = new Uri("pack://application:,,,/xunit.runner.wpf;component/Artwork/" + resourceName);
+      image.UriSource = new Uri("pack://application:,,,/Speckle.Xunit.Runner.Wpf;component/Artwork/" + resourceName);
       image.EndInit();
       return image;
     }

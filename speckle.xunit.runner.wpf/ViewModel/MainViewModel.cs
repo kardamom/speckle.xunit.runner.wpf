@@ -91,7 +91,7 @@ namespace Xunit.Runner.Wpf.ViewModel
 
       if (IsInDesignMode)
       {
-        this.Assemblies.Add(new TestAssemblyViewModel(new AssemblyAndConfigFile(@"C:\Code\xunit.runner.wpf\SampleTestAssembly\bin\Debug\SampleTestAssembly.dll", null)));
+        this.Assemblies.Add(new TestAssemblyViewModel(new AssemblyAndConfigFile(@"C:\Code\Xunit.Runner.Wpf\SampleTestAssembly\bin\Debug\SampleTestAssembly.dll", null)));
       }
 
       //Commands
@@ -160,7 +160,11 @@ namespace Xunit.Runner.Wpf.ViewModel
       CurrentRunState = TestState.NotRun;
 
       foreach (var test in testsToRun)
+      {
         test.State = TestState.NotRun;
+        test.ExecutionTime = "";
+      }
+        
 
 
       var taskList = new List<Task>();
