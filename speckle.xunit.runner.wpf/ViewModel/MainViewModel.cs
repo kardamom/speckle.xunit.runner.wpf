@@ -10,6 +10,7 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -253,7 +254,12 @@ namespace Xunit.Runner.Wpf.ViewModel
     {
       if (StartupAssemblies == null)
         return;
-      var assemblies = StartupAssemblies.Select(x => new AssemblyAndConfigFile(x, configFileName: null));
+      List<AssemblyAndConfigFile> assemblies = new List<AssemblyAndConfigFile>();
+      foreach(var assembly in StartupAssemblies)
+      {
+        if (File.Exists(assembly))
+          assemblies.Add(new AssemblyAndConfigFile(assembly, configFileName: null));
+      }
       await AddAssemblies(assemblies);
       //await AddAssemblies(ParseCommandLine(Environment.GetCommandLineArgs().Skip(1)));
     }
