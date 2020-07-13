@@ -12,9 +12,9 @@ namespace Xunit.Runner.Wpf.ViewModel
 
         private class TraitViewModelComparer : IEqualityComparer<TraitViewModel>, IComparer<TraitViewModel>
         {
-            public int Compare(TraitViewModel x, TraitViewModel y) => StringComparer.Ordinal.Compare(x.Text, y.Text);
-            public bool Equals(TraitViewModel x, TraitViewModel y) => StringComparer.Ordinal.Equals(x.Text, y.Text);
-            public int GetHashCode(TraitViewModel obj) => obj.Text.GetHashCode();
+            public int Compare(TraitViewModel x, TraitViewModel y) => StringComparer.Ordinal.Compare(x.FullText, y.FullText);
+            public bool Equals(TraitViewModel x, TraitViewModel y) => StringComparer.Ordinal.Equals(x.FullText, y.FullText);
+            public int GetHashCode(TraitViewModel obj) => obj.FullText.GetHashCode();
         }
     }
 }

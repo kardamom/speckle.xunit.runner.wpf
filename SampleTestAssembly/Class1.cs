@@ -11,14 +11,14 @@ namespace SampleTestAssembly
     public class Class1
     {
         [Fact]
-        //[Trait("TraitName1", "TraitValue1")]
+        [Trait("TraitName1", "TraitValue1")]
         public void Pass()
         {
             Thread.Sleep(TimeSpan.FromSeconds(1));
         }
 
         [Fact]
-        //[Trait("TraitName1", "TraitValue2")]
+        [Trait("TraitName1", "TraitValue2")]
         public void Fail()
         {
             Thread.Sleep(TimeSpan.FromSeconds(2));
@@ -26,7 +26,7 @@ namespace SampleTestAssembly
         }
 
         [Fact(Skip = "Testing")]
-        //[Trait("TraitName2", "TraitValue2")]
+        [Trait("TraitName2", "TraitValue2")]
         public void Skip()
         {
             Thread.Sleep(TimeSpan.FromSeconds(1));
