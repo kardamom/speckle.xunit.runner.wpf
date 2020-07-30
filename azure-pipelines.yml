@@ -47,6 +47,7 @@ steps:
     publishLocation: 'Container'
 
 - powershell: |
-    If ($(Build.SourceBranch).StartsWith('refs/tags/')) { nuget push -ApiKey $env:APIKEY -Source https://api.nuget.org/v3/index.json $(Build.ArtifactStagingDirectory)/**/*.nupkg }
+    If ($env:BRANCH.StartsWith('refs/tags/')) { nuget push -ApiKey $env:APIKEY -Source https://api.nuget.org/v3/index.json $(Build.ArtifactStagingDirectory)/**/*.nupkg }
   env:
     APIKEY: $(nuget-apikey)
+    BRANCH: $(Build.SourceBranch)
