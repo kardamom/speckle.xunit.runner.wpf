@@ -1,4 +1,7 @@
 # xunit.runner.wpf
+
+[![Build Status](https://teocomi.visualstudio.com/Speckle/_apis/build/status/Speckle-Next.speckle.xunit.runner.wpf?branchName=master)](https://teocomi.visualstudio.com/Speckle/_build/latest?definitionId=1&branchName=master)
+
 XUnit Gui written in WPF
 
 Fork of [xunit.runner.wpf](https://www.nuget.org/packages/xunit.runner.wpf).
