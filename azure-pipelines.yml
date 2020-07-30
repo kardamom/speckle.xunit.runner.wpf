@@ -27,7 +27,6 @@ steps:
 #update build number
 - bash: |
     echo "##vso[build.updatebuildnumber]Release $(tag)"
-    condition: eq(variables['release.enabled'], 'true')
     name: SetReleaseBuildName
 
 - task: NuGetToolInstaller@1
