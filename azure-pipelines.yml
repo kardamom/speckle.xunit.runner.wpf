@@ -19,16 +19,6 @@ variables:
   buildConfiguration: 'Release'
  
 
-steps:
-- powershell: | 
-    $tags = git tag --sort=-creatordate
-    $tag = $tags[0]
-
-#update build number
-- bash: |
-    echo "##vso[build.updatebuildnumber]Release $(tag)"
-    name: SetReleaseBuildName
-
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
