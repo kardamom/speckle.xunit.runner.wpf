@@ -6,7 +6,10 @@
 trigger:
   branches:
     include:
-      - refs/tags/*
+    - 'master'
+  tags:
+    include:
+    - '*'
 
 pool:
   vmImage: 'windows-latest'
@@ -46,6 +49,6 @@ steps:
     publishLocation: 'Container'
 
 - powershell: |
-    nuget push -ApiKey $env:APIKEY -Source https://api.nuget.org/v3/index.json $(Build.ArtifactStagingDirectory)/**/*.nupkg
+    If (startsWith(variables['Build.SourceBranch'], 'refs/tags/')) { nuget push -ApiKey $env:APIKEY -Source https://api.nuget.org/v3/index.json $(Build.ArtifactStagingDirectory)/**/*.nupkg }
   env:
     APIKEY: $(nuget-apikey)
