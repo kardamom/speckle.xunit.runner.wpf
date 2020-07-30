@@ -505,7 +505,7 @@ namespace Xunit.Runner.Wpf.ViewModel
       var i = 0;
       while (i < this.allTestCases.Count)
       {
-        if (string.Compare(this.allTestCases[i].AssemblyFileName, assemblyPath, StringComparison.OrdinalIgnoreCase) == 0)
+        if (string.Compare(this.allTestCases[i].AssemblyPath, assemblyPath, StringComparison.OrdinalIgnoreCase) == 0)
         {
           this.allTestCaseUniqueIDs.Remove(this.allTestCases[i].UniqueID);
           this.allTestCases.RemoveAt(i);
